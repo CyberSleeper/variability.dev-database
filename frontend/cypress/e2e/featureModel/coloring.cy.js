@@ -2,7 +2,7 @@ describe('Coloring tests', () => {
     const coloringTypes = ['Count', 'Direct Children', 'Total Children'];
     coloringTypes.forEach(coloringType => {
         it(`Colors with ${coloringType}`, () => {
-        cy.visit('localhost:8080/feature-model');
+        cy.visit('variability.amanah-staging.cs.ui.ac.id/feature-model');
 
             cy.get('.mdi-palette').click();
             cy.get('div').contains(coloringType).click();

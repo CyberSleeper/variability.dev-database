@@ -28,7 +28,7 @@ describe('Context menu tests', () => {
                 return response.body;
             })
 
-            cy.visit('localhost:8080/feature-model/new');
+            cy.visit('variability.amanah-staging.cs.ui.ac.id/feature-model/new');
             cy.contains('Close', { matchCase: false }).click(); //click tutorial away
         })
 

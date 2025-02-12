@@ -31,7 +31,7 @@ describe('Profile page tests', () => {
             cy.intercept('/files/uploaded/confirmed').as('getFilesUploadedConfirmed');
             cy.intercept('/families/').as('getFamilies');
 
-            cy.visit('localhost:8080/profile');
+            cy.visit('variability.amanah-staging.cs.ui.ac.id/profile');
         })
 
         afterEach(() => {
@@ -50,7 +50,7 @@ describe('Profile page tests', () => {
             
                     cy.intercept('GET', 'tags/').as('getTags');
                     cy.intercept('POST', 'tags/').as('postTags');
-                    cy.visit('localhost:8080/tags');
+                    cy.visit('variability.amanah-staging.cs.ui.ac.id/tags');
 
                     cy.wait('@getTags').then((interception) => {
                         //create the tag
@@ -63,7 +63,7 @@ describe('Profile page tests', () => {
                         cy.wait('@postTags').then((interception) => {
                             
 
-                            cy.visit('localhost:8080/profile');
+                            cy.visit('variability.amanah-staging.cs.ui.ac.id/profile');
 
                             cy.wait(['@getFilesUploadedConfirmed', '@getFamilies']).then(
                                 (interceptions) => {
@@ -78,7 +78,7 @@ describe('Profile page tests', () => {
             )
 
             cy.intercept('GET', 'tags/').as('getTags');
-            cy.visit('localhost:8080/tags');
+            cy.visit('variability.amanah-staging.cs.ui.ac.id/tags');
 
             cy.wait('@getTags').then((interception) => {
                 //delete the tag

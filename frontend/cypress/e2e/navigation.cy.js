@@ -7,25 +7,25 @@ describe('Navigation tests', () => {
 
         describe('Non-logged-in navigations', () => {
             it(`Home navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.contains('Home', { matchCase: false }).click();
-                cy.url().should('eq', 'http://localhost:8080/');
+                cy.url().should('eq', 'https://variability.amanah-staging.cs.ui.ac.id/');
             })
 
             it(`Register navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.contains('Register', { matchCase: false }).click();
                 cy.url().should('include', '/register');
             })
 
             it(`Login navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.contains('Login', { matchCase: false }).click();
                 cy.url().should('include', '/login');
             })
 
             it(`DarkTheme navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.get('.theme-button > span > .mdi-brightness-4');
                 cy.get('.theme-button').click();
                 cy.get('.theme-button > span > .mdi-brightness-7');
@@ -71,33 +71,33 @@ describe('Navigation tests', () => {
             })
 
             it(`Profile navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.contains('Profile', { matchCase: false }).click();
                 cy.url().should('include', '/profile');
             })
 
             it(`Files navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.contains('Files', { matchCase: false }).click();
                 cy.url().should('include', '/files');
             })
 
             it(`Tags navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.contains('Tags', { matchCase: false }).click();
                 cy.url().should('include', '/tags');
             })
 
             it(`Families navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.contains('Families', { matchCase: false }).click();
                 cy.url().should('include', '/families');
             })
 
             it(`Logout navigation`, () => {
-                cy.visit('localhost:8080/families');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id/families');
                 cy.contains('Logout', { matchCase: false }).click();
-                cy.url().should('eq', 'http://localhost:8080/');
+                cy.url().should('eq', 'https://variability.amanah-staging.cs.ui.ac.id/');
             })
         })
     })
@@ -110,28 +110,28 @@ describe('Navigation tests', () => {
 
         describe('Non-logged-in navigations', () => {
             it(`Home navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.get('.drawer-button').click();
                 cy.get('.mobile-navigation').contains('Home', { matchCase: false }).click();
-                cy.url().should('eq', 'http://localhost:8080/');
+                cy.url().should('eq', 'https://variability.amanah-staging.cs.ui.ac.id/');
             })
 
             it(`Register navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.get('.drawer-button').click();
                 cy.get('.mobile-navigation').contains('Register', { matchCase: false }).click();
                 cy.url().should('include', '/register');
             })
 
             it(`Login navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.get('.drawer-button').click();
                 cy.get('.mobile-navigation').contains('Login', { matchCase: false }).click();
                 cy.url().should('include', '/login');
             })
 
             it(`DarkTheme navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.get('.drawer-button').click();
                 cy.get('.mobile-theme-button > div > .mdi-brightness-4');
                 cy.get('.mobile-theme-button').click();
@@ -178,38 +178,38 @@ describe('Navigation tests', () => {
             })
 
             it(`Profile navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.get('.drawer-button').click();
                 cy.get('.mobile-navigation').contains('Profile', { matchCase: false }).click();
                 cy.url().should('include', '/profile');
             })
 
             it(`Files navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.get('.drawer-button').click();
                 cy.get('.mobile-navigation').contains('Files', { matchCase: false }).click();
                 cy.url().should('include', '/files');
             })
 
             it(`Tags navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.get('.drawer-button').click();
                 cy.get('.mobile-navigation').contains('Tags', { matchCase: false }).click();
                 cy.url().should('include', '/tags');
             })
 
             it(`Families navigation`, () => {
-                cy.visit('localhost:8080');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id');
                 cy.get('.drawer-button').click();
                 cy.get('.mobile-navigation').contains('Families', { matchCase: false }).click();
                 cy.url().should('include', '/families');
             })
 
             it(`Logout navigation`, () => {
-                cy.visit('localhost:8080/families');
+                cy.visit('variability.amanah-staging.cs.ui.ac.id/families');
                 cy.get('.drawer-button').click();
                 cy.get('.mobile-navigation').contains('Logout', { matchCase: false }).click();
-                cy.url().should('eq', 'http://localhost:8080/');
+                cy.url().should('eq', 'https://variability.amanah-staging.cs.ui.ac.id/');
             })
         })
     })
