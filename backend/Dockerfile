@@ -17,7 +17,6 @@ RUN set -ex \
   | sort -u)" \
   && apk add --virtual rundeps $runDeps \
   && apk del .build-deps
-
 WORKDIR /app
 
 ENV VIRTUAL_ENV /env
@@ -25,9 +24,6 @@ ENV PATH /env/bin:$PATH
 ENV PORT=8000
 
 EXPOSE 8000
-
-COPY ./manage.py /app/manage.py
-WORKDIR /app
 
 RUN python3 ./manage.py collectstatic --no-input
 
