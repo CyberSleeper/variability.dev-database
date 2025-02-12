@@ -29,7 +29,7 @@ describe('Tags page tests', () => {
             })
             cy.intercept('GET', 'tags/').as('getTags');
             cy.intercept('POST', 'tags/').as('postTags');
-            cy.visit('localhost:8080/tags');
+            cy.visit('variability.amanah-staging.cs.ui.ac.id/tags');
         })
 
         afterEach(() => {

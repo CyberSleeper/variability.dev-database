@@ -75,7 +75,7 @@ services:
       - db
     # labels:
     #   - "traefik.enable=true"
-    #   - "traefik.http.routers.backend.rule=Host(`localhost`) && PathPrefix(`/api`)"
+    #   - "traefik.http.routers.backend.rule=Host(`variability.amanah-staging.cs.ui.ac.id`) && PathPrefix(`/api`)"
     #   - "traefik.http.routers.backend.entrypoints=websecure"
     #   - "traefik.http.routers.backend.tls.certresolver=myresolver"
     #   - "traefik.http.middlewares.redirector.redirectscheme.scheme=https"
@@ -89,7 +89,7 @@ services:
       - backend
     # labels:
     #   - "traefik.enable=true"
-    #   - "traefik.http.routers.frontend.rule=Host(`localhost`)"
+    #   - "traefik.http.routers.frontend.rule=Host(`variability.amanah-staging.cs.ui.ac.id`)"
     #   - "traefik.http.routers.frontend.entrypoints=websecure"
     #   - "traefik.http.routers.frontend.tls.certresolver=myresolver"
     #   - "traefik.http.middlewares.redirector.redirectscheme.scheme=https"
@@ -97,9 +97,9 @@ services:
     # env_file:
     #   - ./frontend.env
     # environment:
-    #   - VUE_APP_DOMAIN="http://localhost:8000/"
-    #   - VUE_APP_DOMAIN_FRONTEND="http://localhost:8080/"
-    #   - VUE_APP_DOMAIN_WEBSOCKET="localhost"
+    #   - VUE_APP_DOMAIN="http://variability.amanah-staging.cs.ui.ac.id/"
+    #   - VUE_APP_DOMAIN_FRONTEND="http://variability.amanah-staging.cs.ui.ac.id/"
+    #   - VUE_APP_DOMAIN_WEBSOCKET="variability.amanah-staging.cs.ui.ac.id"
     #   - VUE_APP_DOMAIN_WEBSOCKET_PORT=9000
 
 volumes:

@@ -10,7 +10,7 @@ Before doing anything with the backend, make sure docker is running (e.g. `sudo 
 List of useful commands
 
 ```
-python -m smtpd -n -c DebuggingServer localhost:1025
+python -m smtpd -n -c DebuggingServer variability.amanah-staging.cs.ui.ac.id:1025
 ```
 
 ```

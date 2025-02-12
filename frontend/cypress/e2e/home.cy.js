@@ -32,7 +32,7 @@ describe('Home page tests', () => {
             cy.intercept('GET', '/families/').as('getFamilies');
             cy.intercept('GET', '/tags/').as('getTags');
 
-            cy.visit('localhost:8080');
+            cy.visit('variability.amanah-staging.cs.ui.ac.id');
             cy.contains('Close', { matchCase: false }).click(); //click tutorial away
         })
 
@@ -59,7 +59,7 @@ describe('Home page tests', () => {
             cy.wait(['@getFilesUploadedConfirmed', '@getFamilies', '@getTags']).then(
                 (interceptions) => {
                     cy.get('[data-cy="feature-model-table-create-button"]').click();
-                    cy.url().should('eq', 'http://localhost:8080/feature-model/new');
+                    cy.url().should('eq', 'http://variability.amanah-staging.cs.ui.ac.id/feature-model/new');
                 }
             )
         })

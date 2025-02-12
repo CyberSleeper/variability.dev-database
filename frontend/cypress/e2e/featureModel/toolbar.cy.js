@@ -28,7 +28,7 @@ describe('Toolbar tests', () => {
                 return response.body;
             })
 
-            cy.visit('localhost:8080/feature-model/new');
+            cy.visit('variability.amanah-staging.cs.ui.ac.id/feature-model/new');
             cy.contains('Close', { matchCase: false }).click(); //click tutorial away
         })
 
@@ -459,7 +459,7 @@ describe('Toolbar tests', () => {
         it(`collaboration`, () => {
             cy.get('[data-cy="feature-model-toolbar-collaboration"]').click();
             cy.get('[data-cy="feature-model-start-collaboration-button"]').click();
-            // A request to peerjs is going out via websocket call (something like: ws://localhost:9000/myapp/peerjs?key=peerjs&id=cf1b17ddd&token=yv6f99sng3j&version=1.4.7)
+            // A request to peerjs is going out via websocket call (something like: ws://variability.amanah-staging.cs.ui.ac.id:9000/myapp/peerjs?key=peerjs&id=cf1b17ddd&token=yv6f99sng3j&version=1.4.7)
             // it's not possible to intercept websocket calls with cypress: https://stackoverflow.com/questions/71705986/capture-websocket-request-in-cypress
             // TODO: find a solution to test peerjs start
         })
