@@ -62,8 +62,8 @@ services:
       # - "traefik.http.middlewares.redirector.redirectscheme.permanent=true"
 
   backend:
-    # build: ./backend
-    image: cybersleeper/variability-dev-backend-image:latest
+    build: ./backend
+    # image: cybersleeper/variability-dev-backend-image:latest
     privileged: true
     restart: unless-stopped
     volumes:
@@ -82,8 +82,8 @@ services:
     #   - "traefik.http.middlewares.redirector.redirectscheme.permanent=true"
 
   frontend:
-    # build: ./frontend
-    image: cybersleeper/variability-dev-frontend-image:latest
+    build: ./frontend
+    # image: cybersleeper/variability-dev-frontend-image:latest
     restart: unless-stopped
     depends_on:
       - backend

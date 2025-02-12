@@ -65,8 +65,19 @@ class RegistrationSerializer(UserSerializer):
             })
             try:
                 user = User.objects.get(email=validated_data['email'])
-            except ObjectDoesNotExist:
+            except Exception:
                 print("otw send email2")
                 user = User.objects.create_user(**validated_data)
-                user.send_activation_link()
+                print("abc")
+                # user.send_activation_link()
+                
+                # user_from_db = User.objects.get(email=user['email'])
+                # if user_from_db.is_active:
+                #     raise BadSignature('User is already activated!')
+                # user_from_db.is_active = True
+                # user_from_db.save()
+                user.is_active = True
+                user.save()
+                
+                print("def")
                 return user
