@@ -81,11 +81,15 @@ class FilesSerializer(serializers.ModelSerializer):
         for line in validated_data['local_file']:
             contents = contents + line.decode()
         transpiled = json.dumps(xml_to_g6(contents, is_file_path=False), indent=2)
+        print("wkwkwkwkwk", transpiled)
         file.transpiled_file = ContentFile(bytes(transpiled, encoding='utf8'), f"{generate_random_string(20)}.json")
         file.local_file = ContentFile(bytes(contents, encoding='utf8'), f"{generate_random_string(20)}.xml")
+        print("wkwkwkwkwk", file.transpiled_file)
+        print("wkwkwkwkwk", file.local_file)
+        print("p")
         # HAPUS SETELAH MAILTRAP FUNCTIONING
-        file.is_confirmed = True
-        file.save()
+        # file.is_confirmed = True
+        # file.save()
         return file
 
     def update(self, instance, validated_data):

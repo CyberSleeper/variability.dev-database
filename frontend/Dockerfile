@@ -14,6 +14,7 @@ ENV VUE_APP_DOMAIN_WEBSOCKET_PORT=${VUE_APP_DOMAIN_WEBSOCKET_PORT}
 COPY package*.json ./
 RUN npm install
 COPY . .
+RUN ls -al
 RUN npm run build
 
 # production stage

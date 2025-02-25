@@ -13,9 +13,11 @@ logger = logging.getLogger(__name__)
 init_repo_name = 'wurstbroteater/djangoProject'
 init_branch = 'main'
 token = os.getenv('GITHUB_TOKEN', 'bla')
+print("what is this token",token)
 if not token:
+    print("in if")
     token = 'bla'
-
+print("what is this token new",token)
 g = Github(login_or_token = token)
 
 

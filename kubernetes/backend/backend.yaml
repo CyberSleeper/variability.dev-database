@@ -16,26 +16,13 @@ spec:
     spec:
       containers:
       - name: backend
-        image: cybersleeper/variability-dev-backend-prod-image
+        image: kenkomkom/vairaibility-backend
         ports:
         - containerPort: 8000
         command: ["sh", "entrypoint.sh"]
-        env:
-        - name: POSTGRES_USER
-          valueFrom: 
-            secretKeyRef:
-              name: postgres-secret
-              key: postgre-user
-        - name: POSTGRES_PASSWORD
-          valueFrom: 
-            secretKeyRef:
-              name: postgres-secret
-              key: postgre-password
-        - name: DB_URL
-          valueFrom:
-            configMapKeyRef:
-              name: postgre-config
-              key: postgre-url
+        envFrom:
+          - configMapRef:
+              name: backend-env
 
 ---
 apiVersion: v1
@@ -50,4 +37,4 @@ spec:
     - protocol: TCP
       port: 8000
       targetPort: 8000
-      nodePort: 30000
+      nodePort: 30100
