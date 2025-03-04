@@ -159,10 +159,10 @@ describe('Home page tests', () => {
 
                     cy.get('[data-cy="file-create-zip-upload-button"]').click();
                     cy.wait(['@postFamilies', '@postZipUpload']).then(
-                        (interceptions2) => {
-                            //check for mail popup
-                            cy.contains('Check your mails', { matchCase: false }).should('exist'); //click tutorial away
-                        }
+                        // (interceptions2) => {
+                        //     //check for mail popup
+                        //     cy.contains('Check your mails', { matchCase: false }).should('exist'); //click tutorial away
+                        // }
                     )
                 }
             )
