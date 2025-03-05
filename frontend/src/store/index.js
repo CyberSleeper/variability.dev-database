@@ -64,9 +64,9 @@ export default new Vuex.Store({
         },
         fetchAnalysis({ commit }) {
             // TODO: add proper endpoint in backend
-            api.get(`${API_URL}analysis/`).then((response) => {
-                commit('setAnalysis', { analysis: response.data });
-            });
+            // api.get(`${API_URL}analysis/`).then((response) => {
+            //     commit('setAnalysis', { analysis: response.data });
+            // });
             // commit('setAnalysis', {
             //     analysis: [
             //         {
@@ -118,7 +118,7 @@ export default new Vuex.Store({
                 })
                 .then(() => {
                     commit('updateSnackbar', {
-                        message: 'File uploaded successfully! Check your mails',
+                        message: 'File uploaded successfully!',
                         variant: 'success',
                         timeout: 5000,
                         show: true,
@@ -140,7 +140,7 @@ export default new Vuex.Store({
                 })
                 .then(() => {
                     commit('updateSnackbar', {
-                        message: 'Upload successfully! Check your mails',
+                        message: 'Upload successfully!',
                         variant: 'success',
                         timeout: 5000,
                         show: true,
@@ -162,7 +162,7 @@ export default new Vuex.Store({
                 })
                 .then(() => {
                     commit('updateSnackbar', {
-                        message: 'Upload successfully! Check your mails',
+                        message: 'Upload successfully!',
                         variant: 'success',
                         timeout: 5000,
                         show: true,

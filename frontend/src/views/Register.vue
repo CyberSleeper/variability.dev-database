@@ -152,7 +152,7 @@ export default Vue.extend({
                                     }); */
                         this.loading = false;
                         this.$store.commit('updateSnackbar', {
-                            message: 'Please verify your mail address.',
+                            message: 'Register successful.',
                             variant: 'info',
                             timeout: -1,
                             show: true,

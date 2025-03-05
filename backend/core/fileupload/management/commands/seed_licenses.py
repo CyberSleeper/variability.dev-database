@@ -82,7 +82,6 @@ class Command(BaseCommand):
                 owner = User.objects.get(id=1),
                 label = family,
                 description = " ",
-                slug = True,
                 )
             if created:
                 self.stdout.write(self.style.SUCCESS(f"Created Family: {family}"))
@@ -124,20 +123,20 @@ class Command(BaseCommand):
                     families_id[0]+=1
                 elif "Schulze" in file_name:
                     family = Family.objects.filter(label = families[1]).first()
-                    version = families_id[0]+1
-                    families_id[0]+=1
+                    version = families_id[1]+1
+                    families_id[1]+=1
                 elif "Pett" in file_name:
                     family = Family.objects.filter(label = families[2]).first()
-                    version = families_id[0]+1
-                    families_id[0]+=1
+                    version = families_id[2]+1
+                    families_id[2]+=1
                 elif "Sprey" in file_name:
                     family = Family.objects.filter(label = families[3]).first()
-                    version = families_id[0]+1
-                    families_id[0]+=1
+                    version = families_id[3]+1
+                    families_id[3]+=1
                 elif "Amanah" in file_name:
                     family = Family.objects.filter(label = families[4]).first()
-                    version = families_id[0]+1
-                    families_id[0]+=1
+                    version = families_id[4]+1
+                    families_id[4]+=1
                 else:
                     continue
 
